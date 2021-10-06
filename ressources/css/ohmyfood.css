@@ -99,6 +99,9 @@ header {
   100% {
     content: "";
     background-color: transparent;
+    display: none;
+    min-height: 0px;
+    position: relative;
     z-index: 0;
   }
 }
