@@ -17,6 +17,8 @@
   /** Fonctionnement **/
   --icone-fonctionnement: #7e7e7e;
   --hover-fonctionnement: #f5edff;
+  /** Restaurants **/
+  --nouveau-restaurant: #008766;
   /** Footer **/
   --footer: #353535;
 }
@@ -249,6 +251,10 @@ header {
   margin-top: 0;
 }
 
+.haut-restaurant {
+  position: relative;
+}
+
 .img-restaurant {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
@@ -257,6 +263,18 @@ header {
   object-fit: cover;
   margin: auto;
   width: 100%;
+}
+
+.nouveau-restaurant {
+  background: var(--tertiraire);
+  border-radius: 5px;
+  color: var(--nouveau-restaurant);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 15px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 .contenu-restaurant {
