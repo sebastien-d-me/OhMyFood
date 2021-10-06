@@ -15,75 +15,101 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <img class="logo" src="ressources/img/Logo.svg">
+        <img class="logo" alt="Logo" src="ressources/img/Logo.svg">
     </header>
+
+
+    <!-- Main -->
     <main>
+        <!-- Loading -->
+        <div class="loading">
+            <span class="txt-loading"></span>
+        </div>
+        
+        <!-- Localisation -->
         <div id="localisation">
             <span><i class="fas fa-map-marker-alt"></i> Paris, Belleville</span>
         </div>
 
+        <!-- Explorer -->
         <section id="explorer">
             <h1>Réservez le menu qui vous convient</h1>
             <span>Découvrez des restaurants d'exception, séléctionnés par nos soins.</span>
             <button class="btn-action">Explorer nos restaurants</button>
         </section>
 
+        <!-- Fonctionnement -->
         <section id="fonctionnement">
             <h1>Fonctionnement</h1>
             <div class="liste-fonctionnement">
-                <div class="etape-fonctionnement">
+                <article class="etape-fonctionnement" aria-label="etape-fonctionnement">
                     <span><i class="fas fa-mobile-alt fa-fw icone-fonctionnement"></i>Choisissez un restaurant</span>
-                </div>
-                <div class="etape-fonctionnement">
+                </article>
+                <article class="etape-fonctionnement" aria-label="etape-fonctionnement">
                     <span><i class="fas fa-list-ul fa-fw icone-fonctionnement"></i>Composez votre menu</span>
-                </div>
-                <div class="etape-fonctionnement">
+                </article>
+                <article class="etape-fonctionnement" aria-label="etape-fonctionnement">
                     <span><i class="fas fa-store fa-fw icone-fonctionnement"></i>Dégustez au restaurant</span>
-                </div>
+                </article>
             </div>
         </section>
 
+        <!-- Restaurants -->
         <section id="restaurants">
             <h1>Restaurants</h1>
             <div class="liste-restaurants">
-                <div class="restaurant">
-                    <img class="img-restaurant" src="ressources/img/restaurants/la-palette-du-gout.jpg">
+                <article class="restaurant" aria-label="restaurant">
+                    <img class="img-restaurant" alt="La palette du goût" src="ressources/img/restaurants/la-palette-du-gout.jpg">
                     <div class="contenu-restaurant">
-                        <i class="far fa-heart btn-aime"></i>
+                        <div class="aime">
+                            <i class="far fa-heart btn-aime"></i>
+                            <i class="fas fa-heart btn-aime"></i>
+                        </div>
                         <span class="nom-restaurant">La palette du goût</span>
                         <span class="desc-restaurant">Ménilmontant</span>
                     </div>
-                </div>
-                <div class="restaurant">
-                    <img class="img-restaurant" src="ressources/img/restaurants/la-note-enchantee.jpg">
+                </article>
+                <article class="restaurant" aria-label="restaurant">
+                    <img class="img-restaurant" alt="La note enchantée" src="ressources/img/restaurants/la-note-enchantee.jpg">
                     <div class="contenu-restaurant">
-                        <i class="far fa-heart btn-aime"></i>
+                        <div class="aime">
+                            <i class="far fa-heart btn-aime"></i>
+                            <i class="fas fa-heart btn-aime"></i>
+                        </div>
                         <span class="nom-restaurant">La note enchantée</span>
                         <span class="desc-restaurant">Charonne</span>
                     </div>
-                </div>
-                <div class="restaurant">
-                    <img class="img-restaurant" src="ressources/img/restaurants/a-la-francaise.jpg">
+                </article>
+                <article class="restaurant" aria-label="restaurant">
+                    <img class="img-restaurant" alt="&Agrave; la française" src="ressources/img/restaurants/a-la-francaise.jpg">
                     <div class="contenu-restaurant">
-                        <i class="far fa-heart btn-aime"></i>
+                        <div class="aime">
+                            <i class="far fa-heart btn-aime"></i>
+                            <i class="fas fa-heart btn-aime"></i>
+                        </div>
                         <span class="nom-restaurant">&Agrave; la française</span>
                         <span class="desc-restaurant">Cité Rouge</span>
                     </div>
-                </div>
-                <div class="restaurant">
-                    <img class="img-restaurant" src="ressources/img/restaurants/le-delice-des-sens.jpg">
+                </article>
+                <article class="restaurant" aria-label="restaurant">
+                    <img class="img-restaurant" alt="Le délice des sens" src="ressources/img/restaurants/le-delice-des-sens.jpg">
                     <div class="contenu-restaurant">
-                        <i class="far fa-heart btn-aime"></i>
+                        <div class="aime">
+                            <i class="far fa-heart btn-aime"></i>
+                            <i class="fas fa-heart btn-aime"></i>
+                        </div>
                         <span class="nom-restaurant">Le délice des sens</span>
                         <span class="desc-restaurant">Folie-Méricourt</span>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
 
 
+    <!-- Footer-->
     <footer>
         <span class="logo-footer">ohmyfood</span>
         <a class="lien-footer" href="#"><i class="fas fa-utensils icone-footer"></i>Proposer un restaurant</a>

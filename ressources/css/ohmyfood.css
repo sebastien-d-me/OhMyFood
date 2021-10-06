@@ -10,6 +10,8 @@
   --box-shadow: #b3b3b3;
   --btn-action-hover-1: #ff79dabf;
   --btn-action-hover-2: #9356dcbf;
+  /** Loading **/
+  --loading: #ffffffc4;
   /** Localisation **/
   --localisation: #eaeaea;
   /** Fonctionnement **/
@@ -28,6 +30,9 @@ body {
 body {
   background-color: var(--fond-site);
   counter-reset: etape-fonctionnement;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /** Contenu **/
@@ -38,7 +43,7 @@ body {
 .btn-action {
   background: var(--secondaire);
   background: linear-gradient(
-    163deg,
+    165deg,
     var(--secondaire) 0%,
     var(--primaire) 100%
   );
@@ -75,6 +80,50 @@ header {
 
 .logo {
   margin: auto;
+}
+
+/** Loading **/
+@keyframes chargement {
+  0% {
+    content: ". . .";
+  }
+  25% {
+    content: "Oh . .";
+  }
+  50% {
+    content: "Oh My .";
+  }
+  75% {
+    content: "Oh My Food";
+  }
+  100% {
+    content: "";
+    background-color: transparent;
+    z-index: 0;
+  }
+}
+
+.txt-loading {
+  border-radius: 25px;
+  display: block;
+  font-size: 72px;
+  margin: auto;
+  text-align: center;
+}
+.txt-loading::after {
+  animation: chargement steps(1, end) 3s;
+  animation-fill-mode: forwards;
+  background-color: var(--loading);
+  color: var(--primaire);
+  content: "";
+  display: flex;
+  flex-direction: column;
+  font-family: "Shrikhand", cursive;
+  justify-content: center;
+  min-height: calc(100vh - 75px);
+  position: absolute;
+  width: 100%;
+  z-index: 1;
 }
 
 /** Localisation **/
@@ -212,12 +261,30 @@ header {
   position: relative;
 }
 
+.aime:hover .fas.fa-heart.btn-aime {
+  opacity: 1;
+}
+.aime:hover .far.fa-heart.btn-aime {
+  opacity: 0;
+}
+.fas.fa-heart.btn-aime {
+  background: var(--primaire);
+  background: linear-gradient(
+    220deg,
+    var(--primaire) 50%,
+    var(--secondaire) 100%
+  );
+  opacity: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .btn-aime {
   font-size: 30px;
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.25s ease-in-out;
 }
 .btn-aime:hover {
   cursor: pointer;
@@ -272,6 +339,7 @@ footer {
 @media screen and (min-width: 992px) {
   main {
     display: flex;
+    flex: 1 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -314,7 +382,17 @@ footer {
     margin-right: 0;
   }
 
+  footer {
+    flex-direction: row;
+  }
+  .logo-footer {
+    margin-bottom: 0;
+  }
   .lien-footer {
     font-size: 15px;
+    margin: auto;
+  }
+  .lien-footer:first-of-type {
+    margin-top: auto;
   }
 }
