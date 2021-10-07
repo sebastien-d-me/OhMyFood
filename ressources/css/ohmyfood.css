@@ -105,7 +105,6 @@ body {
 
 @keyframes apparition-check {
   from {
-    display: flex;
     left: 96%;
   }
   to {
@@ -476,7 +475,7 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 300px;
+  width: 100%;
 }
 
 .prix-item-restaurant {
@@ -489,22 +488,22 @@ main {
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   color: #ffffff;
-  display: flex;
+  display: none;
   flex-direction: column;
   font-size: 30px;
   height: 100%;
   justify-content: center;
   left: 100%;
-  opacity: 0;
   padding: 0px 20px;
   position: absolute;
   right: 0px;
   top: 0;
 }
 .item-restaurant:hover > .check-item-restaurant {
+  align-items: center;
   animation: apparition-check 0.25s;
   animation-fill-mode: forwards;
-  opacity: 1;
+  display: flex;
 }
 
 .item-restaurant:hover > .check-item-restaurant .fa-check-circle {
