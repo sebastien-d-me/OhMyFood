@@ -3,13 +3,15 @@
   /** Palette **/
   --primaire: #9356dc;
   --secondaire: #ff79da;
-  --tertiraire: #99e2d0;
+  --tertiaire: #99e2d0;
   /** Base **/
   --fond-site: #f6f6f6;
   /** Contenu **/
   --box-shadow: #b3b3b3;
   --btn-action-hover-1: #ff79dabf;
   --btn-action-hover-2: #9356dcbf;
+  /** Header **/
+  --fleche-retour: #353535;
   /** Loading **/
   --loading: #ffffffc4;
   /** Localisation **/
@@ -57,6 +59,7 @@ body {
   font-size: 18px;
   height: 50px;
   margin: auto;
+  min-width: 180px;
   padding: 0 20px;
   transition: 0.5s;
 }
@@ -67,8 +70,26 @@ body {
     var(--btn-action-hover-1) 0%,
     var(--btn-action-hover-2) 100%
   );
-  box-shadow: 0px 2px 5px black;
+  box-shadow: 0px 2px 5px #000000;
   cursor: pointer;
+}
+
+.aime:hover .fas.fa-heart {
+  opacity: 1;
+}
+.aime:hover .far.fa-heart {
+  opacity: 0;
+}
+.fas.fa-heart {
+  background: var(--primaire);
+  background: linear-gradient(
+    220deg,
+    var(--primaire) 50%,
+    var(--secondaire) 100%
+  );
+  opacity: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /** Header **/
@@ -77,11 +98,27 @@ header {
   box-shadow: 0 0 5px var(--box-shadow);
   display: flex;
   height: 75px;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.fleche-retour {
+  color: var(--fleche-retour);
+  font-size: 18px;
+  margin-left: 5%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .logo {
   margin: auto;
+}
+
+/** Main **/
+main {
+  flex: 1 0 auto;
 }
 
 /** Loading **/
@@ -125,8 +162,8 @@ header {
   flex-direction: column;
   font-family: "Shrikhand", cursive;
   justify-content: center;
-  min-height: calc(100vh - 75px);
-  position: absolute;
+  min-height: 100vh;
+  position: fixed;
   width: 100%;
   z-index: 1;
 }
@@ -137,6 +174,7 @@ header {
   display: flex;
   height: 50px;
   justify-content: center;
+  margin-top: 75px;
   width: 100%;
 }
 
@@ -244,7 +282,9 @@ header {
   background-color: #ffffff;
   border-radius: 25px;
   box-shadow: 0px 0px 5px var(--box-shadow);
+  color: #000000;
   margin: 10px auto;
+  text-decoration: none;
   width: 90%;
 }
 .restaurant:first-of-type {
@@ -266,7 +306,7 @@ header {
 }
 
 .nouveau-restaurant {
-  background: var(--tertiraire);
+  background: var(--tertiaire);
   border-radius: 5px;
   color: var(--nouveau-restaurant);
   font-size: 18px;
@@ -282,24 +322,7 @@ header {
   position: relative;
 }
 
-.aime:hover .fas.fa-heart.btn-aime {
-  opacity: 1;
-}
-.aime:hover .far.fa-heart.btn-aime {
-  opacity: 0;
-}
-.fas.fa-heart.btn-aime {
-  background: var(--primaire);
-  background: linear-gradient(
-    220deg,
-    var(--primaire) 50%,
-    var(--secondaire) 100%
-  );
-  opacity: 0;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.btn-aime {
+.btn-aime-index {
   font-size: 30px;
   position: absolute;
   right: 20px;
@@ -307,7 +330,7 @@ header {
   transform: translateY(-50%);
   transition: 0.25s ease-in-out;
 }
-.btn-aime:hover {
+.btn-aime-index:hover {
   cursor: pointer;
 }
 
@@ -322,6 +345,81 @@ header {
   display: block;
   font-size: 16px;
   font-weight: lighter;
+}
+
+/** Présentation restaurant **/
+.presentation-restaurant {
+  margin-top: 75px;
+  position: relative;
+  width: 100%;
+}
+
+.image-restaurant {
+  display: block;
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.contenu-presentation-restaurant {
+  background-color: var(--fond-site);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  height: -webkit-fill-available;
+  margin-top: -55px;
+  padding-bottom: 50px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.haut-presentation-restaurant {
+  display: inline-flex;
+  margin-top: 35px;
+  width: 100%;
+}
+
+.nom-restaurant-presentation {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  margin-left: 5%;
+}
+
+.btn-aime-restaurant {
+  font-size: 35px;
+  position: absolute;
+  right: 5%;
+  transition: 0.25s ease-in-out;
+}
+.btn-aime-restaurant:hover {
+  cursor: pointer;
+}
+
+.menu-restaurant {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5%;
+}
+
+.type-menu-restaurant {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+}
+
+.categorie-menu {
+  font-size: 16px;
+}
+.categorie-menu::after {
+  border-bottom: 3px solid var(--tertiaire);
+  content: "";
+  display: block;
+  width: 40px;
+}
+
+.nom-item-restaurant {
+  display: block;
+  font-weight: bold;
 }
 
 /** Footer **/
