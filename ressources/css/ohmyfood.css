@@ -8,6 +8,7 @@
   --fond-site: #f6f6f6;
   /** Contenu **/
   --box-shadow: #b3b3b3;
+  --box-shadow-2: #d6d6d6;
   --btn-action-hover-1: #ff79dabf;
   --btn-action-hover-2: #9356dcbf;
   /** Header **/
@@ -100,7 +101,7 @@ header {
   height: 75px;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .fleche-retour {
@@ -165,7 +166,7 @@ main {
   min-height: 100vh;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 3;
 }
 
 /** Localisation **/
@@ -417,9 +418,41 @@ main {
   width: 40px;
 }
 
+.item-restaurant {
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 2.5px 10px var(--box-shadow-2);
+  margin: 10px 0;
+  padding: 15px 10px;
+}
+
 .nom-item-restaurant {
   display: block;
+  font-size: 18px;
   font-weight: bold;
+}
+
+.contenu-item-restaurant {
+  display: inline-flex;
+  font-size: 15px;
+  margin-top: 5px;
+  position: relative;
+  width: 100%;
+}
+
+.desc-item-restaurant {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 235px;
+}
+
+.prix-item-restaurant {
+  display: inline-flex;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
 }
 
 /** Footer **/
