@@ -94,6 +94,29 @@ body {
 }
 
 /** Animations **/
+@keyframes chargement {
+  0% {
+    content: ". . .";
+  }
+  25% {
+    content: "Oh . .";
+  }
+  50% {
+    content: "Oh My .";
+  }
+  75% {
+    content: "Oh My Food";
+  }
+  100% {
+    content: "";
+    background-color: transparent;
+    display: none;
+    min-height: 0px;
+    position: relative;
+    z-index: 0;
+  }
+}
+
 @keyframes rotate-check {
   from {
     transform: rotateZ(0deg);
@@ -103,7 +126,7 @@ body {
   }
 }
 
-@keyframes apparition-check {
+@keyframes apparition-check-in {
   from {
     left: 96%;
   }
@@ -111,13 +134,30 @@ body {
     left: 80%;
   }
 }
+@keyframes apparition-check-out {
+  from {
+    left: 80%;
+  }
+  to {
+    left: 96%;
+    visibility: hidden;
+  }
+}
 
-@keyframes pousse-check {
+@keyframes pousse-check-in {
   from {
     width: calc(100% - 4%);
   }
   to {
     width: calc(100% - 20%);
+  }
+}
+@keyframes pousse-check-out {
+  from {
+    width: calc(100% - 20%);
+  }
+  to {
+    width: calc(100% - 4%);
   }
 }
 
@@ -151,29 +191,6 @@ main {
 }
 
 /** Loading **/
-@keyframes chargement {
-  0% {
-    content: ". . .";
-  }
-  25% {
-    content: "Oh . .";
-  }
-  50% {
-    content: "Oh My .";
-  }
-  75% {
-    content: "Oh My Food";
-  }
-  100% {
-    content: "";
-    background-color: transparent;
-    display: none;
-    min-height: 0px;
-    position: relative;
-    z-index: 0;
-  }
-}
-
 .txt-loading {
   border-radius: 25px;
   display: block;
@@ -454,6 +471,9 @@ main {
   padding: 15px 10px;
   position: relative;
 }
+.item-restaurant:hover {
+  cursor: pointer;
+}
 
 .nom-item-restaurant {
   display: block;
@@ -463,6 +483,8 @@ main {
 }
 
 .contenu-item-restaurant {
+  animation: pousse-check-out 0.125s;
+  animation-fill-mode: forwards;
   display: inline-flex;
   font-size: 14px;
   margin-top: 5px;
@@ -484,6 +506,8 @@ main {
 }
 
 .check-item-restaurant {
+  animation: apparition-check-out 0s;
+  animation-fill-mode: forwards;
   background-color: var(--tertiaire);
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
@@ -501,7 +525,14 @@ main {
 }
 .item-restaurant:hover > .check-item-restaurant {
   align-items: center;
-  animation: apparition-check 0.25s;
+  animation: apparition-check-in 0.25s;
+  animation-fill-mode: forwards;
+  display: flex;
+  visibility: visible;
+}
+.item-restaurant:not(:hover) > .check-item-restaurant {
+  align-items: center;
+  animation: apparition-check-out 0.25s;
   animation-fill-mode: forwards;
   display: flex;
 }
@@ -511,7 +542,7 @@ main {
   animation-fill-mode: forwards;
 }
 .item-restaurant:hover .contenu-item-restaurant {
-  animation: pousse-check 0.125s;
+  animation: pousse-check-in 0.125s;
   animation-fill-mode: forwards;
 }
 
