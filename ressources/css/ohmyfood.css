@@ -93,6 +93,35 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+/** Animations **/
+@keyframes rotate-check {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes apparition-check {
+  from {
+    display: flex;
+    left: 96%;
+  }
+  to {
+    left: 80%;
+  }
+}
+
+@keyframes pousse-check {
+  from {
+    width: calc(100% - 4%);
+  }
+  to {
+    width: calc(100% - 20%);
+  }
+}
+
 /** Header **/
 header {
   background-color: #ffffff;
@@ -424,17 +453,19 @@ main {
   box-shadow: 0px 2.5px 10px var(--box-shadow-2);
   margin: 10px 0;
   padding: 15px 10px;
+  position: relative;
 }
 
 .nom-item-restaurant {
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
+  width: fit-content;
 }
 
 .contenu-item-restaurant {
   display: inline-flex;
-  font-size: 15px;
+  font-size: 14px;
   margin-top: 5px;
   position: relative;
   width: 100%;
@@ -445,14 +476,44 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 235px;
+  width: 300px;
 }
 
 .prix-item-restaurant {
   display: inline-flex;
   font-weight: bold;
+}
+
+.check-item-restaurant {
+  background-color: var(--tertiaire);
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+  height: 100%;
+  justify-content: center;
+  left: 100%;
+  opacity: 0;
+  padding: 0px 20px;
   position: absolute;
-  right: 10px;
+  right: 0px;
+  top: 0;
+}
+.item-restaurant:hover > .check-item-restaurant {
+  animation: apparition-check 0.25s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.item-restaurant:hover > .check-item-restaurant .fa-check-circle {
+  animation: rotate-check 0.5s;
+  animation-fill-mode: forwards;
+}
+.item-restaurant:hover .contenu-item-restaurant {
+  animation: pousse-check 0.125s;
+  animation-fill-mode: forwards;
 }
 
 /** Footer **/
