@@ -135,12 +135,15 @@ body {
   }
 }
 @keyframes apparition-check-out {
-  from {
+  0% {
     left: 80%;
   }
-  to {
-    left: 96%;
-    visibility: hidden;
+  99% {
+    left: 90%;
+  }
+  100% {
+    opacity: 0;
+    width: fit-content;
   }
 }
 
@@ -483,7 +486,7 @@ main {
 }
 
 .contenu-item-restaurant {
-  animation: pousse-check-out 0.125s;
+  animation: pousse-check-out 0.75s;
   animation-fill-mode: forwards;
   display: inline-flex;
   font-size: 14px;
@@ -506,8 +509,6 @@ main {
 }
 
 .check-item-restaurant {
-  animation: apparition-check-out 0s;
-  animation-fill-mode: forwards;
   background-color: var(--tertiaire);
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
@@ -532,7 +533,7 @@ main {
 }
 .item-restaurant:not(:hover) > .check-item-restaurant {
   align-items: center;
-  animation: apparition-check-out 0.25s;
+  animation: apparition-check-out 0.5s;
   animation-fill-mode: forwards;
   display: flex;
 }
@@ -623,6 +624,17 @@ footer {
   }
   .restaurant:last-of-type {
     margin-right: 0;
+  }
+
+  .menu-restaurant {
+    flex-direction: row;
+  }
+  .image-restaurant {
+    height: 350px;
+  }
+  .type-menu-restaurant {
+    flex: 1 0 30%;
+    margin: 25px 15px;
   }
 
   footer {
