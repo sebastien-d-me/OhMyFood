@@ -117,6 +117,17 @@ body {
   }
 }
 
+@keyframes apparition-item {
+  from {
+    opacity: 0%;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 100%;
+    transform: translateY(0px);
+  }
+}
+
 @keyframes rotate-check {
   from {
     transform: rotateZ(0deg);
@@ -430,7 +441,7 @@ main {
 
 .nom-restaurant-presentation {
   font-family: "Shrikhand", cursive;
-  font-size: 28px;
+  font-size: 25px;
   margin-left: 5%;
 }
 
@@ -451,9 +462,21 @@ main {
 }
 
 .type-menu-restaurant {
+  animation: apparition-item 0.75s;
+  animation-fill-mode: forwards;
   display: flex;
   flex-direction: column;
   margin: 25px 0;
+  opacity: 0;
+}
+.type-menu-restaurant:nth-child(1) {
+  animation-delay: 0.25s;
+}
+.type-menu-restaurant:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.type-menu-restaurant:nth-child(3) {
+  animation-delay: 0.75s;
 }
 
 .categorie-menu {
@@ -627,11 +650,14 @@ footer {
     margin-right: 0;
   }
 
+  .image-restaurant {
+    height: 350px;
+  }
   .menu-restaurant {
     flex-direction: row;
   }
-  .image-restaurant {
-    height: 350px;
+  .nom-restaurant-presentation {
+    font-size: 28px;
   }
   .type-menu-restaurant {
     flex: 1 0 30%;
