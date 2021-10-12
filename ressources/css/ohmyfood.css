@@ -506,6 +506,9 @@ main {
   display: block;
   font-size: 16px;
   font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   width: fit-content;
 }
 
@@ -566,6 +569,7 @@ main {
   animation: rotate-check 0.5s;
   animation-fill-mode: forwards;
 }
+.item-restaurant:hover .nom-item-restaurant,
 .item-restaurant:hover .contenu-item-restaurant {
   animation: pousse-check-in 0.125s;
   animation-fill-mode: forwards;
