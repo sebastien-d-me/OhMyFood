@@ -27,7 +27,7 @@ Ce projet est le n°3 du parcours [Développeur Front-End](https://openclassroom
 - Assurer la cohérence graphique d'un site web.
 
 ### Informations complémentaires
-- Soutenance à passer.
+- Soutenance validé le 25/10/2021.
 - Lien vers le site : [Cliquez-ici](https://sebastien-d-me.github.io/SebastienDelahaye_3_05102021/ "Cliquez-ici").
 
 
