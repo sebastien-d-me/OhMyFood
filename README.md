@@ -2,7 +2,7 @@
 ## Projet 3 - Ohmyfood!
 ------------
 ### Description du projet
-Ce projet est le n°3 du parcours [Développeur d'application - JavaScript React](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react "Développeur d'application - JavaScript React") qui consiste à dynamiser une page web avec des animations CSS
+Ce projet est le n°3 du parcours [Développeur d'application - JavaScript React](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react "Développeur d'application - JavaScript React") qui consiste à dynamiser une page web avec des animations CSS.
 ### Cahiers des charges
 ##### Spécifications fonctionnelles
 1. Au survol des boutons principaux, ils doivent légèrement s'éclaicrir avec une ombre plus visible.
