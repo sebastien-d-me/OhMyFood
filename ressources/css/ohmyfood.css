@@ -40,6 +40,17 @@ body {
   min-height: 100vh;
 }
 
+/** Fonts **/
+@font-face {
+    font-family: Roboto;
+    src: url("../fonts/Roboto/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: Shrikhand;
+    src: url("../fonts/Shrikhand/Shrikhand-Regular.ttf");
+}
+
 /** Contenu **/
 * {
   font-family: "Roboto", sans-serif;

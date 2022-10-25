@@ -16,7 +16,7 @@ Ce projet est le n°3 du parcours [**Développeur Front-End**](https://openclass
 3. Les icônes utilisées proviennent de Font Awesome.
 4. La charte graphique est la suivante : Primaire (#9356DC), Secondaire (#FF79DA), Tertiaire (#99E2D0).
 5. Interdiction d'utiliser un framework CSS et/ou du JS.
-7. Code valide au W3C : [HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebastien-d-me.github.io%2FSebastienDelahaye_3_05102021%2F "HTML") | [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebastien-d-me.github.io%2FSebastienDelahaye_3_05102021%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr "CSS").
+7. Code valide au W3C : [HTML](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsebastien-d-me.github.io%2FOhMyFood%2F "HTML") | [CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fsebastien-d-me.github.io%2FOhMyFood%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr "CSS").
 8. Compatible sur les dernières versions de Google Chrome et Mozilla Firefox.
 
 ### Compétences acquises
@@ -28,6 +28,6 @@ Ce projet est le n°3 du parcours [**Développeur Front-End**](https://openclass
 
 ### Informations complémentaires
 - Soutenance validé le 25/10/2021.
-- Lien vers le site : [Cliquez-ici](https://sebastien-d-me.github.io/SebastienDelahaye_3_05102021/ "Cliquez-ici").
+- Lien vers le site : [Cliquez-ici](https://sebastien-d-me.github.io/OhMyFood/ "Cliquez-ici").
 
 
