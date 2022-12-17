@@ -1,3 +1,5 @@
+<meta property="og:image" content="https://raw.githubusercontent.com/sebastien-d-me/OhMyFood/main/ressources/img/Logo.svg">
+
 # Formation Développeur Front-End
 ## Projet 3 - Ohmyfood!
 ------------
